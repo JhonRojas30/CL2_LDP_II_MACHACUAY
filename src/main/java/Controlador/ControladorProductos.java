@@ -3,6 +3,7 @@ package Controlador;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,12 +14,15 @@ import model.TblProductocl2;
 /**
  * Servlet implementation class ControladorProductos
  */
+@WebServlet("/controladorProductos")
 public class ControladorProductos extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
+	
+	
     public ControladorProductos() {
         super();
         // TODO Auto-generated constructor stub
@@ -29,7 +33,9 @@ public class ControladorProductos extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		TblProductocl2Imp crud = new TblProductocl2Imp();
+		
+		 //request.getRequestDispatcher("login.jsp").forward(request, response);
+		/*TblProductocl2Imp crud = new TblProductocl2Imp();
 		List<TblProductocl2> listadoproducto =crud.ListarProducto();
 		//ASIGNAMOS EL LISTADO DE CLIENTES RECUPERADOS DE LA BD
 		request.setAttribute("ListadoProductos", listadoproducto);
@@ -37,7 +43,7 @@ public class ControladorProductos extends HttpServlet {
 		//response.getWriter().append("Controlador Cliente ").append(request.getContextPath());
 		//REDIRECCIONAMOS
 		request.getRequestDispatcher("/listadoproductos.jsp").forward(request, response);
-	}
+	*/}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

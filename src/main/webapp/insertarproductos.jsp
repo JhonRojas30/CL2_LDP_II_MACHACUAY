@@ -9,7 +9,7 @@
 <body>
 
 <h1 align="center">Registrar Producto </h1>
-<form action="ControladorProductos" method="post">
+<form action="controladorProductos" method="post">
 <table align="center">
 <tr>
 <td>Nombre</td>
